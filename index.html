@@ -1,412 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI/ML Engineer Portfolio</title>
-    <meta name="description"
-        content="Portfolio of an AI/ML Engineer specializing in Deep Learning, NLP, and Computer Vision.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Joshi — AI/ML Engineer</title>
+  <meta name="description" content="Jay Joshi — AI/ML Engineer specialising in LLM applications, computer vision, cloud-native ML, and full-stack AI products.">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"></div>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">JAY<span class="accent">.AI</span></div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+  <!-- ── Scroll Progress ──────────────────────────── -->
+  <div id="scroll-progress"></div>
+
+  <!-- ── Page Loader ──────────────────────────────── -->
+  <div id="loader">
+    <div class="loader-logo">JAY<span style="color:#7c3aed">.AI</span></div>
+    <div class="loader-track"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- ── Background ───────────────────────────────── -->
+  <div id="bg-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- ── Custom Cursor ────────────────────────────── -->
+  <div class="cursor-dot"    id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- ── Mobile Menu ──────────────────────────────── -->
+  <nav id="mobile-menu">
+    <button class="mobile-close"><i class="fas fa-times"></i></button>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ── Navbar ───────────────────────────────────── -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="#hero">JAY<span class="accent">.AI</span></a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-canvas-wrap">
+        <canvas id="network-canvas"></canvas>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Open to Full-Time Roles &amp; Collaborations
+        </div>
+
+        <h1 class="hero-name">
+          <span>Hey, I'm</span>
+          <span class="grad">Jay Joshi.</span>
+        </h1>
+
+        <p class="hero-sub">AI/ML Engineer · Cloud Architect · Full-Stack Builder</p>
+
+        <div class="hero-typing-row">
+          Building&nbsp;<span class="typing-text"></span>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll">Scroll</div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         ABOUT
+    ══════════════════════════════════════════════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Who I Am</p>
+        <h2 class="section-title reveal delay-1">About <span class="hl">Me</span></h2>
+
+        <div class="about-grid">
+
+          <div class="about-img-wrap reveal delay-2">
+            <div class="about-img-frame">
+              <img src="assets/profile.png" alt="Jay Joshi">
             </div>
-        </nav>
-    </header>
+            <div class="about-img-glow"></div>
+          </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1 class="glitch" data-text="Jay Joshi">Jay Joshi</h1>
-                <p class="hero-subtitle">Building the <span class="typing-text"></span></p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary-btn">View Work</a>
-                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
-                </div>
+          <div class="about-card reveal delay-3">
+            <h3>Bridging Data &amp; Intelligence</h3>
+            <p>
+              I'm an AI/ML Engineer and full-stack builder holding a Graduate Certificate in
+              Cloud Architecture (Seneca Polytechnic) and a Graduate Certificate in AI with
+              Machine Learning (Humber College). I specialise in building production-grade AI
+              systems — from real-time computer vision pipelines to LLM-powered applications —
+              and turning complex data into intelligent, deployable products.
+            </p>
+
+            <div class="stats-row">
+              <div class="stat-box">
+                <span class="stat-num" data-target="8">8+</span>
+                <span class="stat-lbl">Projects</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num" data-target="3">3+</span>
+                <span class="stat-lbl">Years Exp</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num" data-target="2">2+</span>
+                <span class="stat-lbl">Grad Certs</span>
+              </div>
             </div>
-            <div class="hero-visual">
-                <!-- Canvas for particle network animation -->
-                <canvas id="network-canvas"></canvas>
+
+            <div class="about-pills">
+              <span class="about-pill">AI/ML Engineer</span>
+              <span class="about-pill">Cloud Architect</span>
+              <span class="about-pill">LLM Builder</span>
+              <span class="about-pill">Computer Vision</span>
+              <span class="about-pill">Open Source</span>
             </div>
-        </section>
+          </div>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">About <span class="accent">Me</span></h2>
-                <div class="about-content">
-                    <div class="about-image">
-                        <div class="img-frame">
-                            <img src="assets/profile.png" alt="Jay Joshi" class="profile-img">
-                        </div>
-                    </div>
-                    <div class="about-text">
-                        <h3>Bridging Data & Intelligence</h3>
-                        <p>I am a passionate AI/ML Engineer with a strong foundation in Cloud Architecture and Deep
-                            Learning. Currently pursuing a Graduate Certificate in Cloud Architecture at Seneca
-                            Polytechnic, I have hands-on experience in developing real-time object detection systems,
-                            optimizing ML pipelines, and building AI-driven applications. I love turning complex data
-                            into actionable insights and intelligent applications.</p>
-                        <div class="stats">
-                            <div class="stat-item">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">Projects</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">3+</span>
-                                <span class="stat-label">Years Exp</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         WHAT I BUILD
+    ══════════════════════════════════════════════ -->
+    <section id="whatibuild" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Specialisations</p>
+        <h2 class="section-title reveal delay-1">What I <span class="hl">Build</span></h2>
+
+        <div class="features-grid">
+
+          <div class="feature-card fc-cyan reveal delay-2">
+            <div class="f-icon ic-cyan"><i class="fas fa-eye"></i></div>
+            <h3>Production CV Systems</h3>
+            <p>Real-time object detection and tracking pipelines using YOLOv11, TensorRT, and DeepSORT — optimised for embedded GPUs and autonomous robotics.</p>
+          </div>
+
+          <div class="feature-card fc-purple reveal delay-3">
+            <div class="f-icon ic-purple"><i class="fas fa-brain"></i></div>
+            <h3>LLM-Powered Applications</h3>
+            <p>RAG pipelines, agentic Q&amp;A with citations, prompt engineering workspaces, and AI-driven document intelligence — built with LangChain and Hugging Face.</p>
+          </div>
+
+          <div class="feature-card fc-pink reveal delay-4">
+            <div class="f-icon ic-pink"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud-Native ML</h3>
+            <p>End-to-end MLOps on AWS / Azure / GCP with Docker, Kubernetes, Terraform, and CI/CD — so models ship to production and stay there reliably.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         SKILLS
+    ══════════════════════════════════════════════ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Tech Stack</p>
+        <h2 class="section-title reveal delay-1">Technical <span class="hl">Arsenal</span></h2>
+
+        <div class="skills-stack">
+
+          <div class="skill-row reveal delay-1">
+            <div class="skill-row-head">
+              <div class="skill-row-icon ic-cyan"><i class="fas fa-code"></i></div>
+              <span class="skill-row-label">Languages &amp; Tools</span>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Technical <span class="accent">Arsenal</span></h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Languages & Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">R</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">FastAPI</span>
-                            <span class="skill-tag">Streamlit</span>
-                            <span class="skill-tag">Linux</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>AI/ML Frameworks</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">Scikit-Learn</span>
-                            <span class="skill-tag">Keras</span>
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">Hugging Face</span>
-                            <span class="skill-tag">LangChain</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Cloud & DevOps</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Azure</span>
-                            <span class="skill-tag">GCP</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">Terraform</span>
-                            <span class="skill-tag">MLflow</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">R</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Bash</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Streamlit</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">Linux</span>
             </div>
-        </section>
+          </div>
 
-
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">My <span class="accent">Experience</span></h2>
-                <div class="timeline">
-                    <!-- Experience Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Jan 2025 – Apr 2025</div>
-                        <div class="timeline-content">
-                            <h3>Machine Learning Engineer (Capstone)</h3>
-                            <h4>Kevares Autonomous Services</h4>
-                            <p class="location">Toronto, Canada</p>
-                            <ul>
-                                <li>Developed a real-time trash detection system for autonomous robots using YOLOv11n
-                                    and OpenCV (82% mAP).</li>
-                                <li>Optimized preprocessing pipelines, reducing training time by 25% via automated
-                                    hyperparameter optimization.</li>
-                                <li>Applied transfer learning on TACO dataset and fine-tuned on custom street-level
-                                    data.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Experience Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Oct 2023 – Mar 2024</div>
-                        <div class="timeline-content">
-                            <h3>Software Developer Intern</h3>
-                            <h4>Mindsclik</h4>
-                            <p class="location">Bangalore, India</p>
-                            <ul>
-                                <li>Deployed object detection system using YOLOv5 and OpenCV with 98% accuracy on custom
-                                    datasets.</li>
-                                <li>Optimized training pipeline improving mAP by 15% and reducing inference time to
-                                    <50ms.< /li>
-                                <li>Integrated model into real-time app for automated detection.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Experience Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Jun 2023 – Sep 2023</div>
-                        <div class="timeline-content">
-                            <h3>Software Engineer Intern</h3>
-                            <h4>Pekaabo</h4>
-                            <p class="location">Surat, India</p>
-                            <ul>
-                                <li>Shipped new e-commerce checkout experience using TypeScript and ASP.NET Core,
-                                    improving conversion by 27%.</li>
-                                <li>Created reusable infrastructure for image optimization and personalized
-                                    recommendations.</li>
-                                <li>Led backend redesign to support modular features and improve maintainability.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          <div class="skill-row reveal delay-2">
+            <div class="skill-row-head">
+              <div class="skill-row-icon ic-purple"><i class="fas fa-robot"></i></div>
+              <span class="skill-row-label">AI / ML Frameworks</span>
             </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <div class="container">
-                <h2 class="section-title">My <span class="accent">Education</span></h2>
-                <div class="timeline">
-                    <!-- Education Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">May 2025 – Dec 2025</div>
-                        <div class="timeline-content">
-                            <h3>Grad. Cert. in Cloud Architecture</h3>
-                            <h4>Seneca Polytechnic</h4>
-                            <p class="location">Toronto, Canada</p>
-                            <p>Coursework: Cloud Infrastructure, Automation, Security, Data Storage, Compliance.</p>
-                        </div>
-                    </div>
-                    <!-- Education Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Sep 2024 – Apr 2025</div>
-                        <div class="timeline-content">
-                            <h3>Grad. Cert. in AI with Machine Learning</h3>
-                            <h4>Humber College</h4>
-                            <p class="location">Toronto, Canada</p>
-                            <p>Coursework: Deep Learning, NLP, Reinforcement Learning, ML in Cloud Computing.</p>
-                        </div>
-                    </div>
-                    <!-- Education Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Aug 2021 – Jul 2024</div>
-                        <div class="timeline-content">
-                            <h3>B.Sc. in IT (Artificial Intelligence)</h3>
-                            <h4>Parul University</h4>
-                            <p class="location">Vadodara, India</p>
-                            <p>Coursework: Data Structures, Computer Vision, Big Data Analytics, Neural Networks.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="skill-tags">
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">Scikit-Learn</span>
+              <span class="skill-tag">Keras</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">LangChain</span>
             </div>
-        </section>
+          </div>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
-                <div class="projects-grid">
-                    <!-- Project Card 1: Smart Trash Detection -->
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/project1.png" alt="Smart Trash Detection" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <h3>Smart Trash Detection</h3>
-                            <p>Real-time litter detection for autonomous robots using YOLOv11n. Optimized via transfer
-                                learning for 25% faster inference.</p>
-                            <div class="tech-stack">
-                                <span>YOLOv11n</span>
-                                <span>OpenCV</span>
-                                <span>TensorRT</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/jayjoshi20" target="_blank" class="icon-link"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 2: RapidUI -->
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/project2.png" alt="RapidUI" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <h3>RapidUI: AI Component Gen</h3>
-                            <p>AI-powered tool that translates plain-text prompts into interactive React components
-                                using GPT-3.5-turbo.</p>
-                            <div class="tech-stack">
-                                <span>React</span>
-                                <span>OpenAI API</span>
-                                <span>Tailwind</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/jayjoshi20" target="_blank" class="icon-link"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 3: NextVibe -->
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/project3.png" alt="NextVibe" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <h3>NextVibe Social Feed</h3>
-                            <p>Lightweight social feed clone with server-side rendering, optimistic UI updates, and
-                                JWT-based auth.</p>
-                            <div class="tech-stack">
-                                <span>Next.js</span>
-                                <span>MongoDB</span>
-                                <span>Framer Motion</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/jayjoshi20" target="_blank" class="icon-link"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 4: Vehicle Detection System -->
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/project4.png" alt="Vehicle Detection System" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <h3>Vehicle Detection System</h3>
-                            <p>Real-time object detection model using YOLOv5 and DeepSORT. Identifies vehicle types,
-                                tracks speed, and counts traffic flow on freeways.</p>
-                            <div class="tech-stack">
-                                <span>YOLOv5</span>
-                                <span>DeepSORT</span>
-                                <span>OpenCV</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/jayjoshi20" target="_blank" class="icon-link"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 5: Face Recognition Attendance -->
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/project5.png" alt="Face Recognition Attendance" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <h3>Face Recog. Attendance</h3>
-                            <p>Automated attendance system using YOLOv3 for facial recognition. Features a live video
-                                feed input and CSV export.</p>
-                            <div class="tech-stack">
-                                <span>YOLOv3</span>
-                                <span>Python</span>
-                                <span>OpenCV</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/jayjoshi20" target="_blank" class="icon-link"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 6: Sentiment Analysis Engine -->
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/project6.png" alt="Sentiment Analysis Engine" class="project-img">
-                        </div>
-                        <div class="project-info">
-                            <h3>Sentiment Analysis Engine</h3>
-                            <p>NLP tool analyzing YouTube comments and blog reviews using RNNs and LSTMs. Categorizes
-                                feedback into positive, neutral, or negative.</p>
-                            <div class="tech-stack">
-                                <span>TensorFlow</span>
-                                <span>LSTM/RNN</span>
-                                <span>NLP</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/jayjoshi20" target="_blank" class="icon-link"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="skill-row reveal delay-3">
+            <div class="skill-row-head">
+              <div class="skill-row-icon ic-pink"><i class="fas fa-cloud"></i></div>
+              <span class="skill-row-label">Cloud &amp; DevOps</span>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
-                <div class="contact-content">
-                    <p>Open for opportunities. Let's build something intelligent together.</p>
-                    <a href="mailto:jayjoshi3040@gmail.com" class="email-link">jayjoshi3040@gmail.com</a>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jayjoshi3040/" target="_blank" class="social-icon"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/jayjoshi20" target="_blank" class="social-icon"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://calendar.google.com/" target="_blank" class="social-icon"><i
-                                class="fas fa-calendar-check"></i></a>
-                    </div>
-                </div>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Azure</span>
+              <span class="skill-tag">GCP</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">MLflow</span>
             </div>
-        </section>
-    </main>
+          </div>
 
-    <footer>
-        <p>&copy; 2025 Jay Joshi. Built with <i class="fas fa-code"></i> and <i class="fas fa-brain"></i>.</p>
-    </footer>
+          <div class="skill-row reveal delay-4">
+            <div class="skill-row-head">
+              <div class="skill-row-icon ic-cyan"><i class="fas fa-database"></i></div>
+              <span class="skill-row-label">Data Engineering &amp; MLOps</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Spark</span>
+              <span class="skill-tag">Dask</span>
+              <span class="skill-tag">TensorFlow Serving</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Jenkins</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">Data Pipeline Automation</span>
+            </div>
+          </div>
 
-    <script src="script.js"></script>
+          <div class="skill-row reveal delay-5">
+            <div class="skill-row-head">
+              <div class="skill-row-icon ic-purple"><i class="fas fa-chart-bar"></i></div>
+              <span class="skill-row-label">Visualization &amp; Analytics</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Seaborn</span>
+              <span class="skill-tag">Plotly</span>
+              <span class="skill-tag">Power BI</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         EXPERIENCE
+    ══════════════════════════════════════════════ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Work History</p>
+        <h2 class="section-title reveal delay-1">My <span class="hl">Experience</span></h2>
+
+        <div class="tl">
+
+          <div class="tl-item reveal delay-2">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">Feb 2026 – Present</span>
+              <h3>AI Analyst &amp; Web Developer</h3>
+              <h4>Canadian Outlet</h4>
+              <p class="loc"><i class="fas fa-map-marker-alt"></i> Toronto, Canada</p>
+              <ul>
+                <li>Deployed a production AI support chatbot (Claude API) for a live 500+ SKU electronics retail store — using prompt engineering and conversation orchestration to autonomously resolve product info, order tracking, and FAQ queries with zero human escalation.</li>
+                <li>Engineered weekly Python scraping pipelines (BeautifulSoup, Requests, Selenium) extracting competitor pricing across 5+ e-commerce platforms, processing 500+ SKU price points per run and delivering structured pricing reports to management.</li>
+                <li>Instrumented Google Analytics dashboards monitoring 3 weekly KPIs (traffic, conversion rate, bounce behaviour) — delivering structured snapshots to leadership that shaped promotional scheduling and product listing decisions.</li>
+                <li>Sole technical resource — scoped, built, and deployed AI-driven tooling end-to-end alongside the CEO and operations team, translating business needs into production-grade systems with measurable commercial outcomes.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal delay-3">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">Dec 2024 – Jul 2025</span>
+              <h3>AI &amp; Data Consultant (Freelance)</h3>
+              <h4>Upwork &amp; Fiverr</h4>
+              <p class="loc"><i class="fas fa-map-marker-alt"></i> Remote</p>
+              <ul>
+                <li>Executed AI and data science consulting engagements for retail and consumer goods clients — building Python and SQL analytical pipelines and presenting findings as structured dashboards for non-technical stakeholders.</li>
+                <li>Built Power BI and Python dashboards covering category KPIs, market trends, and competitor benchmarks — giving clients a single-view analytics layer for faster, data-backed decisions.</li>
+                <li>Integrated LLM APIs and prototyped RAG pipelines for intelligent query tools within client workflows — delivering applied AI across diverse industry contexts.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal delay-4">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">Jan 2025 – Apr 2025</span>
+              <h3>Machine Learning Engineer (Capstone)</h3>
+              <h4>Kevares Autonomous Services</h4>
+              <p class="loc"><i class="fas fa-map-marker-alt"></i> Toronto, Canada</p>
+              <ul>
+                <li>Developed a real-time trash detection system for autonomous robots using YOLOv11n and OpenCV, achieving 82% mAP@0.5 and 0.85 precision via TensorRT optimisation.</li>
+                <li>Applied transfer learning on TACO dataset and fine-tuned on custom street-level data, improving recall by 12% via model regularisation and multi-scale feature extraction.</li>
+                <li>Optimised preprocessing and data augmentation pipelines, reducing training time by 25% using automated hyperparameter optimisation.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal delay-2">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">Oct 2023 – Mar 2024</span>
+              <h3>Software Developer Intern</h3>
+              <h4>Mindsclik</h4>
+              <p class="loc"><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+              <ul>
+                <li>Built and deployed an object detection system using YOLOv5 and OpenCV, achieving 98% accuracy on custom datasets with TensorRT and real-time GPU inference.</li>
+                <li>Improved mAP by 15% via data augmentation and hyperparameter tuning; reduced inference time to &lt;50ms per frame.</li>
+                <li>Integrated model into a real-time application for automated detection workflows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tl-item reveal delay-4">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">Jun 2023 – Sep 2023</span>
+              <h3>Software Engineer Intern</h3>
+              <h4>Pekaabo</h4>
+              <p class="loc"><i class="fas fa-map-marker-alt"></i> Surat, India</p>
+              <ul>
+                <li>Shipped a new e-commerce checkout experience using TypeScript and ASP.NET Core, improving conversion flow completion by 27%.</li>
+                <li>Built reusable infrastructure for image optimisation, product configuration, and personalised recommendations.</li>
+                <li>Led backend redesign to support modular features, reducing deployment overhead.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         EDUCATION
+    ══════════════════════════════════════════════ -->
+    <section id="education" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Academic Background</p>
+        <h2 class="section-title reveal delay-1">My <span class="hl">Education</span></h2>
+
+        <div class="tl">
+
+          <div class="tl-item reveal delay-2">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">May 2025 – Dec 2025</span>
+              <h3>Graduate Certificate in Cloud Architecture</h3>
+              <h4>Seneca Polytechnic</h4>
+              <p class="loc"><i class="fas fa-map-marker-alt"></i> Toronto, Canada</p>
+              <p>Coursework: Cloud Infrastructure, Automation &amp; Control Systems, Security Management, Cloud Integration, Data Storage, Ethics &amp; Compliance.</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal delay-3">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">Sep 2024 – Apr 2025</span>
+              <h3>Graduate Certificate in AI with Machine Learning</h3>
+              <h4>Humber College</h4>
+              <p class="loc"><i class="fas fa-map-marker-alt"></i> Toronto, Canada</p>
+              <p>Coursework: Deep Learning, Advanced Deep Learning, NLP, Reinforcement Learning, AI Capstone, ML in Cloud Computing.</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal delay-4">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">Aug 2021 – Jul 2024</span>
+              <h3>B.Sc. in Information Technology (Artificial Intelligence)</h3>
+              <h4>Parul University</h4>
+              <p class="loc"><i class="fas fa-map-marker-alt"></i> Vadodara, India</p>
+              <p>Coursework: Data Structures, Machine Learning, Computer Vision, NLP, Data Mining, Neural Networks, Big Data Analytics.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         PROJECTS
+    ══════════════════════════════════════════════ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Portfolio</p>
+        <h2 class="section-title reveal delay-1">Featured <span class="hl">Projects</span></h2>
+
+        <div class="proj-grid">
+
+          <!-- 01 Smart Trash Detection -->
+          <div class="proj-card reveal delay-1">
+            <div class="proj-img-wrap">
+              <img src="assets/project1.png" alt="Smart Trash Detection">
+              <div class="proj-img-overlay"></div>
+              <span class="proj-num">01</span>
+            </div>
+            <div class="proj-body">
+              <h3>Smart Trash Detection</h3>
+              <p>Real-time litter detection for autonomous robots using YOLOv11n. 82% mAP@0.5 via TensorRT optimisation and transfer learning on the TACO dataset.</p>
+              <div class="proj-tech">
+                <span>YOLOv11n</span><span>OpenCV</span><span>TensorRT</span><span>PyTorch</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/jayjoshi20" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 RapidUI -->
+          <div class="proj-card reveal delay-2">
+            <div class="proj-img-wrap">
+              <img src="assets/project2.png" alt="RapidUI">
+              <div class="proj-img-overlay"></div>
+              <span class="proj-num">02</span>
+            </div>
+            <div class="proj-body">
+              <h3>RapidUI: AI Component Generator</h3>
+              <p>AI-powered tool that converts plain-text UI prompts into interactive React components via GPT-3.5-turbo — reducing prototyping time by 70%.</p>
+              <div class="proj-tech">
+                <span>React</span><span>OpenAI API</span><span>Tailwind</span><span>Vercel</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/jayjoshi20" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 NextVibe -->
+          <div class="proj-card reveal delay-3">
+            <div class="proj-img-wrap">
+              <img src="assets/project3.png" alt="NextVibe">
+              <div class="proj-img-overlay"></div>
+              <span class="proj-num">03</span>
+            </div>
+            <div class="proj-body">
+              <h3>NextVibe Social Feed</h3>
+              <p>Lightweight social feed engine with SSR, optimistic UI updates, infinite scroll, and JWT-based auth — built for clean UX and mobile-first accessibility.</p>
+              <div class="proj-tech">
+                <span>Next.js</span><span>MongoDB</span><span>Framer Motion</span><span>Zustand</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/jayjoshi20" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04 IntelliScope -->
+          <div class="proj-card reveal delay-1">
+            <div class="proj-img-wrap">
+              <img src="assets/project4.png" alt="IntelliScope">
+              <div class="proj-img-overlay"></div>
+              <span class="proj-num">04</span>
+            </div>
+            <div class="proj-body">
+              <h3>IntelliScope</h3>
+              <p>AI-powered document intelligence platform — hybrid semantic search (BM25 + CLIP), agentic Q&amp;A with citations, and HDBSCAN embedding drift detection.</p>
+              <div class="proj-tech">
+                <span>FastAPI</span><span>LangChain</span><span>Qdrant</span><span>Docker</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/jayjoshi20/IntelliScope" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05 PromptVault -->
+          <div class="proj-card reveal delay-2">
+            <div class="proj-img-wrap">
+              <img src="assets/project5.png" alt="PromptVault">
+              <div class="proj-img-overlay"></div>
+              <span class="proj-num">05</span>
+            </div>
+            <div class="proj-body">
+              <h3>PromptVault</h3>
+              <p>Enterprise-grade LLM prompt engineering workspace — A/B split-testing, auto-evaluation grading, version control, and a deployment API for production prompts.</p>
+              <div class="proj-tech">
+                <span>React</span><span>Gemini 2.5</span><span>LLaMA 3.3</span><span>SQLite</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/jayjoshi20" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06 intelliresume -->
+          <div class="proj-card reveal delay-3">
+            <div class="proj-img-wrap">
+              <img src="assets/project6.png" alt="intelliresume">
+              <div class="proj-img-overlay"></div>
+              <span class="proj-num">06</span>
+            </div>
+            <div class="proj-body">
+              <h3>intelliresume</h3>
+              <p>AI-powered resume &amp; JD intelligence platform — surfaces skill gaps, scores JD–resume fit, and tailors application materials using LLM reasoning.</p>
+              <div class="proj-tech">
+                <span>Next.js</span><span>FastAPI</span><span>OpenAI</span><span>NLP</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/jayjoshi20" target="_blank" class="proj-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════════════ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-wrap">
+          <p class="section-eyebrow reveal" style="justify-content:center">Get In Touch</p>
+          <h2 class="section-title reveal delay-1" style="text-align:center">
+            Let's <span class="hl">Work Together</span>
+          </h2>
+
+          <div class="contact-card reveal delay-2">
+            <p>Open for full-time roles, freelance contracts, and interesting collaborations. Let's build something intelligent together.</p>
+            <a class="email-btn" href="mailto:jayjoshi3040@gmail.com">
+              jayjoshi3040@gmail.com
+            </a>
+            <div class="socials">
+              <a class="social-ico" href="https://www.linkedin.com/in/jayjoshi3040/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a class="social-ico" href="https://github.com/jayjoshi20" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a class="social-ico" href="https://calendar.google.com/" target="_blank" title="Schedule a call">
+                <i class="fas fa-calendar-check"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2026 Jay Joshi &mdash; Built with <i class="fas fa-code"></i> and <i class="fas fa-brain"></i></p>
+  </footer>
+
+  <!-- ── Back to Top ──────────────────────────────── -->
+  <button id="back-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
